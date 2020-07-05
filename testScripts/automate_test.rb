@@ -17,7 +17,7 @@ caps["browserstack.timezone"] = "New York"
 caps["browserstack.selenium_version"] = "4.0.0-alpha-2"
 
 driver = Selenium::WebDriver.for(:remote,
-	:url => "http://souravkundu5:8rVfmauhSSuDRTH1xxRt@hub-cloud.browserstack.com/wd/hub",
+	:url => "http://BROWSERSTACK_USERNAME:BROWSERSTACK_ACCESS_KEY@hub-cloud.browserstack.com/wd/hub",
 	:desired_capabilities => caps)
 
 driver.navigate.to "http://localhost:3000"
