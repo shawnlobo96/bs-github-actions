@@ -24,4 +24,4 @@ jobs:
       uses: actions/setup-node@v1
     - run: npm ci
     - run: npm run build --if-present
-    - run: ruby automate_test.rb
+    - run: ruby testScripts/automate_test.rb
