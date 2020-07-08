@@ -36,8 +36,9 @@ jobs:
     - run: gem install browserstack-local
     - run: gem install selenium-webdriver
 
-    - run: npm ci
-    - run: npm run build --if-present
+    #- run: npm ci
+    #- run: npm run build --if-present
+    - run: npm install
     - run: npm start
 
     - run: ruby testScripts/automate_test.rb
