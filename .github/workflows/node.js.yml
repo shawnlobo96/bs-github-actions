@@ -32,7 +32,7 @@ jobs:
     #    BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
 
     - name: Setup Ruby and Local
-      uses: ruby/setup-ruby@v1
+    - uses: ruby/setup-ruby@v1
       with:
         ruby-version: 2.6 # Not needed with a .ruby-version file
       run: bundle install
