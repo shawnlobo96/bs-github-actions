@@ -39,6 +39,7 @@ jobs:
     #- run: npm ci
     #- run: npm run build --if-present
     - run: npm install
-    - run: npm start
+    - run: npm install -g forever
+    - run: forever start bin/www
 
     - run: ruby testScripts/automate_test.rb
