@@ -43,3 +43,6 @@ jobs:
     - run: forever start bin/www
 
     - run: ruby testScripts/automate_test.rb
+      env:
+        BROWSERSTACK_ACCESS_KEY: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
+        BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
