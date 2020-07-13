@@ -21,7 +21,7 @@ jobs:
         node-version: 10.x
 
     - name: Install BrowserStack Local
-      uses: ianwalter/bsl@v2.1.0
+      uses: ianwalter/bsl@v2.0.1
       with:
         args: yarn test
       env:
