@@ -23,8 +23,8 @@ jobs:
     - run: yarn add @ianwalter/bsl --dev
     - name: Install BrowserStack Local
       uses: ianwalter/bsl@v2.0.1
-      with:
-        args: yarn test
+      # with:
+      #   args: yarn test
       env:
         BROWSERSTACK_ACCESS_KEY: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
         BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
