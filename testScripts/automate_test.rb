@@ -12,7 +12,7 @@ url = "http://#{username}:#{key}@hub-cloud.browserstack.com/wd/hub"
 bs_local_args = { "key" => key }
 
 #starts the Local instance with the required arguments
-bs_local.start(bs_local_args)
+#bs_local.start(bs_local_args)
 
 #Input Capabilities
 caps = Selenium::WebDriver::Remote::Capabilities.new
@@ -40,4 +40,4 @@ driver.close()
 driver.quit()
 
 #stop the Local instance
-bs_local.stop
+#bs_local.stop
