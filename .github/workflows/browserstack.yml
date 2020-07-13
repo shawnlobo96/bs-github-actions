@@ -24,7 +24,7 @@ jobs:
     - name: Install BrowserStack Local
       uses: ianwalter/bsl@v2.0.1
       with:
-        args: yarn bsl move
+        args: run --install
       env:
         BROWSERSTACK_ACCESS_KEY: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
         BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
@@ -32,7 +32,7 @@ jobs:
     - name: Start Local
       uses: ianwalter/bsl@v2.0.1
       with:
-        args: start
+        args: run --start
       env:
         BROWSERSTACK_ACCESS_KEY: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
         BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
