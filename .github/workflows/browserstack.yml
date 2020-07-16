@@ -1,7 +1,7 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: Node.js CI - GitHub Hosted
+name: BrowserStack
 
 on:
   push:
@@ -10,23 +10,15 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
+  Test:
 
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
     - uses: actions/setup-node@v1
       with:
         node-version: 10.x
-
-    #- name: Install BrowserStack Local
-    #  uses: ianwalter/bsl@v2.1.0
-    #  with:
-    #    args: yarn test
-    #  env:
-    #    BROWSERSTACK_ACCESS_KEY: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
-    #    BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
 
     - uses: ruby/setup-ruby@v1
       with:
