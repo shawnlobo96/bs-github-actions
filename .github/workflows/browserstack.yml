@@ -20,23 +20,6 @@ jobs:
       with:
         node-version: 10.x
 
-    # - run: yarn add @ianwalter/bsl --dev
-    - name: Install BrowserStack Local
-      uses: ianwalter/bsl@v2.0.1
-      with:
-        args: run --install
-      env:
-        BROWSERSTACK_ACCESS_KEY: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
-        BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
-
-    - name: Start Local
-      uses: ianwalter/bsl@v2.0.1
-      with:
-        args: run --start
-      env:
-        BROWSERSTACK_ACCESS_KEY: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
-        BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
-
     - uses: ruby/setup-ruby@v1
       with:
         ruby-version: 2.6 # Not needed with a .ruby-version file
