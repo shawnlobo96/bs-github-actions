@@ -31,6 +31,3 @@ driver.navigate.to "http://localhost:3000"
 puts driver.title
 driver.close()
 driver.quit()
-
-#stop the Local instance
-bs_local.stop
