@@ -23,17 +23,10 @@ jobs:
     - uses: ruby/setup-ruby@v1
       with:
         ruby-version: 2.6 # Not needed with a .ruby-version file
-    #- run: bundle install
-    #- run: bundle exec rake
     - run: gem install browserstack-local
     - run: gem install selenium-webdriver
-
-    #- run: npm ci
-    #- run: npm run build --if-present
     - run: npm install
-    - run: npm install -g forever
-    - run: forever start bin/www
-
+    - run: npm start &
     - run: ruby testScripts/automate_test.rb
       env:
         BROWSERSTACK_ACCESS_KEY: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
