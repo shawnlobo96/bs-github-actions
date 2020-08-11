@@ -24,14 +24,14 @@ jobs:
       with:
         ruby-version: 2.6 # Not needed with a .ruby-version file
     - name: 'BrowserStack Setup'
-        uses: 'rchougule/local-action@master'
-        with:
-          local-testing: start
-          local-logging-level: all-logs
-          build-name: meta#
-          username:  ${{ secrets.BROWSERSTACK_USERNAME }}
-          access-key: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
-          local-identifier: random
+      uses: 'rchougule/local-action@master'
+      with:
+        local-testing: start
+        local-logging-level: all-logs
+        build-name: meta#
+        username:  ${{ secrets.BROWSERSTACK_USERNAME }}
+        access-key: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
+        local-identifier: random
     - run: gem install selenium-webdriver
     - run: npm install
     - run: npm start &
@@ -40,8 +40,8 @@ jobs:
         BROWSERSTACK_ACCESS_KEY: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
         BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
     - name: 'Stopping Local'
-        uses: 'rchougule/local-action@master'
-        with:
-          local-testing: stop
-          username: ${{ secrets.BROWSERSTACK_USERNAME }}
-          access-key: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
+      uses: 'rchougule/local-action@master'
+      with:
+        local-testing: stop
+        username: ${{ secrets.BROWSERSTACK_USERNAME }}
+        access-key: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
